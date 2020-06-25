@@ -1,0 +1,16 @@
+{% load static %}
+
+<link href="{% static "tinymce/css/prism.css"%}" rel = "stylesheet">
+</head>
+
+<body>
+<p>Hello WORLD</p>
+{% for bug in Bugs %}
+	<p>{{bug.bug_title}}</p>
+	<p>{{bug.bug_info|safe}}</p>
+	<p>{{bug.bug_published}}</p>
+	<br><br>
+{% endfor %}
+
+<script src="{% static "tinymce/js/prism.js"%}"></script>
+</body>
